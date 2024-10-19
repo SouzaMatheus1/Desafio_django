@@ -12,18 +12,34 @@ Este é um projeto web simples desenvolvido com Django para realizar a **busca e
 
 ## Como Usar
 
-1. Clone este repositório:
-   ```bash
+Clone este repositório: 
     $git clone https://github.com/SouzaMatheus1/Desafio_django.git
 
-2. Navegue até o diretório do projeto:
-   ```bash
-    $cd meu_projeto
-   ```bash
+Navegue até o diretório do projeto: 
+    $cd Desafio_django
+
+Crie um ambiente virtual (opcional, mas recomendado): 
+    $python -m venv venv
+
+Ative o ambiente virtual:
+    No Windows: 
+        $venv\Scripts\activate
+    No macOS e Linux: 
+        $source venv/bin/activate
+
+Instale as dependências: 
+    Certifique-se de que o requirements.txt esteja presente no diretório do projeto e contenha as bibliotecas necessárias. 
+
+Em seguida, execute: 
     $pip install -r requirements.txt
-   ```bash
+
+Execute as migrações do banco de dados (se houver): 
+    $python manage.py migrate
+
+Execute o servidor Django: 
     $python manage.py runserver
-   ```bash
+
+Acesse o projeto no navegador: 
     http://localhost:8000
-    
-   ```
+
+No Image Search, insira a URL de uma imagem e clique no botão para visualizá-la.

@@ -86,3 +86,45 @@ body {
 .button:hover{
     background-color: #218838;
 }
+
+.table_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.table_title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.students_table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.students_table th, .students_table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.students_table th {
+    background-color: #15ff00;
+    color: white;
+    font-weight: bold;
+}
+
+.students_table td {
+    background-color: #f9f9f9;
+}
+
+.students_table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}

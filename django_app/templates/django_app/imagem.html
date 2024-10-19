@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'django_app/css/style.css' %}">
+    <script src="{% static 'django_app/js/main.js' %}"></script>
+    <title>Image search</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Seja bem-vindo ao Image Search</h1>
+        <p>Cole a URL da imagem para visualizá-la</p>
+    </header>
+
+    <main class="content">
+        <section class="search_section">
+            <label for="search_image">Insira a URL da imagem: &nbsp;</label>
+            <input type="text" id="search_image" class="input" placeholder="https://exemplo.com/imagem.jpg">
+            <button class="search_button" onclick="buscarImagem()">Buscar Imagem</button>
+        </section>
+
+        <section class="image_display">
+            <h2>Resultado da Busca</h2>
+            <div id="image_container" class="image_container">
+                <p>Nenhuma imagem para exibir.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

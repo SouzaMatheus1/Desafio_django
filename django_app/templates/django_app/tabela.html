@@ -1,41 +1,47 @@
-{% load static %}
+    {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'django_app/css/style.css' %}">
-    <script src="{% static 'django_app/js/main.js' %}"></script>
-    <title>Alunos</title>
-</head>
-<body>
-    <div class="header">
-        <h1>Alunos</h1>
-    </div>
-    <div class="table_container">
-        <h2 class="table_title">Lista de Alunos</h2>
-        <table class="students_table">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Matrícula</th>
-                    <th>Curso</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for aluno in data %}
-                <tr>
-                    <td>{{ aluno.0 }}</td>
-                    <td>{{ aluno.1 }}</td>
-                    <td>{{ aluno.2 }}</td>
-                    <td>{{ aluno.3 }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'django_app/css/style.css' %}">
+        <script src="{% static 'django_app/js/main.js' %}"></script>
+        <title>Alunos</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Alunos</h1>
+        </div>
+        <div class="table_container">
+            <h2 class="table_title">Lista de Alunos</h2>
+            <table class="students_table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Peso</th>
+                        <th>Altura</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if data %}
+                        {% for aluno in data %}
+                        <tr>
+                            <td>{{ aluno.0 }}</td>
+                            <td>{{ aluno.1 }}</td>
+                            <td>{{ aluno.2 }}</td>
+                            <td>{{ aluno.3 }}</td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="4">Nenhum aluno encontrado.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+        
+    </body>
+    </html>
